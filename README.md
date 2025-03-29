@@ -79,5 +79,7 @@ Contributions are welcome! Feel free to open an issue or submit a pull request t
 - **Profile Management**: Update username, details, or profile picture.
 - **Privacy Controls**: Block or restrict messages from others.
 - **Message Encryption**: Ensure secure chats with encrypted storage and transmission.
-- **Media Sharing**: Share images and files effortlessly in chats.  
+- **Media Sharing**: Share images and files effortlessly in chats.
+
+Acknowleged: Charles Jatto  
 
