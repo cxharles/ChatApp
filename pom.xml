@@ -27,22 +27,23 @@
     <repositories>
         <repository>
             <id>mys3chatapp-snapshot</id>
-            <url>https://s3.amazonaws.com/mys3chatapp/snapshot</url>
+            <url>s3://mys3chatapp/snapshot</url>
         </repository>
         <repository>
             <id>mys3chatapp-release</id>
-            <url>https://s3.amazonaws.com/mys3chatapp/release</url>
+            <url>s3://mys3chatapp/release</url>
         </repository>
     </repositories>
 
+    <!-- Plugin Repositories -->
     <pluginRepositories>
         <pluginRepository>
             <id>mys3chatapp-snapshot</id>
-            <url>https://s3.amazonaws.com/mys3chatapp/snapshot</url>
+            <url>s3://mys3chatapp/snapshot</url>
         </pluginRepository>
         <pluginRepository>
             <id>mys3chatapp-release</id>
-            <url>https://s3.amazonaws.com/mys3chatapp/release</url>
+            <url>s3://mys3chatapp/release</url>
         </pluginRepository>
     </pluginRepositories>
 
@@ -50,11 +51,11 @@
     <distributionManagement>
         <snapshotRepository>
             <id>mys3chatapp-snapshot</id>
-            <url>https://s3.amazonaws.com/mys3chatapp/snapshot</url>
+            <url>s3://mys3chatapp/snapshot</url>
         </snapshotRepository>
         <repository>
             <id>mys3chatapp-release</id>
-            <url>https://s3.amazonaws.com/mys3chatapp/release</url>
+            <url>s3://mys3chatapp/release</url>
         </repository>
     </distributionManagement>
 
@@ -103,7 +104,7 @@
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
-            <version>1.18.28</version>
+            <version>1.18.40</version>
             <scope>provided</scope>
         </dependency>
 
@@ -123,7 +124,7 @@
         <dependency>
             <groupId>org.kuali.maven.wagons</groupId>
             <artifactId>maven-s3-wagon</artifactId>
-            <version>1.3.1</version>
+            <version>1.3.3</version>
         </dependency>
     </dependencies>
 
