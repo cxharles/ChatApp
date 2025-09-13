@@ -1,160 +1,162 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
-	<modelVersion>4.0.0</modelVersion>
-	<parent>
-		<groupId>org.springframework.boot</groupId>
-		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>3.4.0</version>
-		<relativePath/> <!-- lookup parent from repository -->
-	</parent>
-	<groupId>com.goldencat</groupId>
-	<artifactId>chatapp</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
-	<name>chatapp</name>
-	<description>Web Chat App for one to one chat</description>
-	<url/>
-	<licenses>
-		<license/>
-	</licenses>
-	<developers>
-		<developer/>
-	</developers>
-	<scm>
-		<connection/>
-		<developerConnection/>
-		<tag/>
-		<url/>
-	</scm>
-	<properties>
-		<java.version>17</java.version>
-	</properties>
+<project xmlns="http://maven.apache.org/POM/4.0.0" 
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 
+                             https://maven.apache.org/xsd/maven-4.0.0.xsd">
 
-	 <repositories>
-    <repository>
-        <id>central</id>
-        <url>https://s3://mys3chatapp/snapshot</url>
-    </repository>
-</repositories>
+    <modelVersion>4.0.0</modelVersion>
 
-<repository>
-        <id>central</id>
-        <url>https://s3://mys3chatapp/release</url>
-    </repository>
-</repositories>
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>3.4.0</version>
+        <relativePath/>
+    </parent>
 
-<pluginRepositories>
-    <pluginRepository>
-        <id>central</id>
-        <url>https://s3://mys3chatapp/snapshot</url>
-    </pluginRepository>
-</pluginRepositories>
+    <groupId>com.goldencat</groupId>
+    <artifactId>chatapp</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <name>chatapp</name>
+    <description>Web Chat App for one-to-one chat</description>
 
-<pluginRepositories>
-    <pluginRepository>
-        <id>central</id>
-        <url>https://s3://mys3chatapp/release</url>
-    </pluginRepository>
+    <properties>
+        <java.version>17</java.version>
+    </properties>
 
-  <distributionManagement>
-    <snapshotRepository>
-        <id> mys3chatapp-snapshot</id>
-        <url>s3://mys3chatapp/snapshot</url>
-    </snapshotRepository>
-   <repository>
-        <id> mys3chatapp-release</id>
-        <url>s3://mys3chatapp/release</url>
-    </repository>
-  </distributionManagement>
+    <!-- Repositories -->
+    <repositories>
+        <repository>
+            <id>mys3chatapp-snapshot</id>
+            <url>https://s3.amazonaws.com/mys3chatapp/snapshot</url>
+        </repository>
+        <repository>
+            <id>mys3chatapp-release</id>
+            <url>https://s3.amazonaws.com/mys3chatapp/release</url>
+        </repository>
+    </repositories>
 
-	<dependencies>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-data-jpa</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-security</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-thymeleaf</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-web</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-websocket</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.thymeleaf.extras</groupId>
-			<artifactId>thymeleaf-extras-springsecurity6</artifactId>
-		</dependency>
+    <pluginRepositories>
+        <pluginRepository>
+            <id>mys3chatapp-snapshot</id>
+            <url>https://s3.amazonaws.com/mys3chatapp/snapshot</url>
+        </pluginRepository>
+        <pluginRepository>
+            <id>mys3chatapp-release</id>
+            <url>https://s3.amazonaws.com/mys3chatapp/release</url>
+        </pluginRepository>
+    </pluginRepositories>
 
-		<dependency>
-			<groupId>com.mysql</groupId>
-			<artifactId>mysql-connector-j</artifactId>
-			<scope>runtime</scope>
-		</dependency>
-		<dependency>
-			<groupId>org.projectlombok</groupId>
-			<artifactId>lombok</artifactId>
-			<version>1.18.28</version>
-			<scope>provided</scope>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-test</artifactId>
-			<scope>test</scope>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.security</groupId>
-			<artifactId>spring-security-test</artifactId>
-			<scope>test</scope>
-		</dependency>
+    <!-- Distribution Management -->
+    <distributionManagement>
+        <snapshotRepository>
+            <id>mys3chatapp-snapshot</id>
+            <url>https://s3.amazonaws.com/mys3chatapp/snapshot</url>
+        </snapshotRepository>
+        <repository>
+            <id>mys3chatapp-release</id>
+            <url>https://s3.amazonaws.com/mys3chatapp/release</url>
+        </repository>
+    </distributionManagement>
+
+    <dependencies>
+        <!-- Spring Boot Starters -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-jpa</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-security</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-thymeleaf</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-websocket</artifactId>
+        </dependency>
+
+        <!-- Thymeleaf Extras -->
+        <dependency>
+            <groupId>org.thymeleaf.extras</groupId>
+            <artifactId>thymeleaf-extras-springsecurity6</artifactId>
+        </dependency>
+
+        <!-- Database -->
+        <dependency>
+            <groupId>com.mysql</groupId>
+            <artifactId>mysql-connector-j</artifactId>
+            <scope>runtime</scope>
+        </dependency>
         <dependency>
             <groupId>com.h2database</groupId>
             <artifactId>h2</artifactId>
             <scope>test</scope>
-       </dependency>
+        </dependency>
 
-	   <dependency>
-           <groupId>org.kuali.maven.wagons</groupId>
-           <artifactId>maven-s3-wagon</artifactId>
-           <version>1.3.1</version>
-      </dependency>
+        <!-- Lombok -->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.28</version>
+            <scope>provided</scope>
+        </dependency>
 
-	</dependencies>
+        <!-- Testing -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-test</artifactId>
+            <scope>test</scope>
+        </dependency>
 
-	<build>
-		<plugins>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-compiler-plugin</artifactId>
-				<configuration>
-					<annotationProcessorPaths>
-						<path>
-							<groupId>org.projectlombok</groupId>
-							<artifactId>lombok</artifactId>
-						</path>
-					</annotationProcessorPaths>
-				</configuration>
-			</plugin>
-			<plugin>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
-				<configuration>
-					<excludes>
-						<exclude>
-							<groupId>org.projectlombok</groupId>
-							<artifactId>lombok</artifactId>
-						</exclude>
-					</excludes>
-				</configuration>
-			</plugin>
-		</plugins>
-	</build>
+        <!-- S3 Wagon -->
+        <dependency>
+            <groupId>org.kuali.maven.wagons</groupId>
+            <artifactId>maven-s3-wagon</artifactId>
+            <version>1.3.1</version>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <!-- Compiler Plugin -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <annotationProcessorPaths>
+                        <path>
+                            <groupId>org.projectlombok</groupId>
+                            <artifactId>lombok</artifactId>
+                        </path>
+                    </annotationProcessorPaths>
+                </configuration>
+            </plugin>
+
+            <!-- Spring Boot Maven Plugin -->
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <excludes>
+                        <exclude>
+                            <groupId>org.projectlombok</groupId>
+                            <artifactId>lombok</artifactId>
+                        </exclude>
+                    </excludes>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 
 </project>
