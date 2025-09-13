@@ -29,6 +29,29 @@
 	<properties>
 		<java.version>17</java.version>
 	</properties>
+
+	 <repositories>
+    <repository>
+      <id>mys3chatapp-snapshot</id>
+      <url>s3://mys3chatapp/snapshot</url>
+    </repository>
+    <repository>
+      <id>mys3chatapp-release</id>
+      <url>s3://mys3chatapp/release</url>
+    </repository>
+  </repositories>
+
+  <distributionManagement>
+    <snapshotRepository>
+        <id> mys3chatapp-snapshot</id>
+        <url>s3://mys3chatapp/snapshot</url>
+    </snapshotRepository>
+   <repository>
+        <id> mys3chatapp-release</id>
+        <url>s3://mys3chatapp/release</url>
+    </repository>
+  </distributionManagement>
+
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
