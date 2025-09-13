@@ -1,1 +1,11 @@
-CREATE DATABASE chatapp
+-- Create a new database
+CREATE DATABASE chatapp;
+
+-- Create a dedicated user and grant privileges
+CREATE USER 'root' IDENTIFIED BY 'admin123';
+
+-- Grant privileges to the user on the new database
+GRANT ALL PRIVILEGES ON chatapp.* TO 'root';
+
+-- Apply the changes
+FLUSH PRIVILEGES;
