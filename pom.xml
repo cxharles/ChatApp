@@ -32,14 +32,29 @@
 
 	 <repositories>
     <repository>
-      <id>mys3chatapp-snapshot</id>
-      <url>s3://mys3chatapp/snapshot</url>
+        <id>central</id>
+        <url>https://s3://mys3chatapp/snapshot</url>
     </repository>
-    <repository>
-      <id>mys3chatapp-release</id>
-      <url>s3://mys3chatapp/release</url>
+</repositories>
+
+<repository>
+        <id>central</id>
+        <url>https://s3://mys3chatapp/release</url>
     </repository>
-  </repositories>
+</repositories>
+
+<pluginRepositories>
+    <pluginRepository>
+        <id>central</id>
+        <url>https://s3://mys3chatapp/snapshot</url>
+    </pluginRepository>
+</pluginRepositories>
+
+<pluginRepositories>
+    <pluginRepository>
+        <id>central</id>
+        <url>https://s3://mys3chatapp/release</url>
+    </pluginRepository>
 
   <distributionManagement>
     <snapshotRepository>
